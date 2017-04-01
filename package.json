@@ -1,0 +1,19 @@
+{
+  "name": "dynamicwebsite",
+  "version": "1.0.0",
+  "description": "New website that demonstrates the capabilities of our club through innovative web design based heavily in Javascript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wvsoda/dynamicwebsite.git"
+  },
+  "author": "Gunner Spencer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wvsoda/dynamicwebsite/issues"
+  },
+  "homepage": "https://github.com/wvsoda/dynamicwebsite#readme"
+}
