@@ -11,7 +11,7 @@ function setup() {
 		middle.mass = 300;
 		
 	var orbits = [],
-		text = ["ABOUT", "CONTACT", "PROJECTS", "NEWSLETTER"];
+		text = ["ABOUT", "CONTACT", "PROJECTS", "CALANDER"];
 		
 	var about = particle.create(middle.x + middle.mass / 2, middle.y, 1, Math.PI / 2),
 		contact = particle.create(middle.x - middle.mass / 2, middle.y, 1, -Math.PI / 2),
