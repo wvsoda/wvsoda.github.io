@@ -204,8 +204,8 @@ function setup() {
 		ctx.font = "100px Times";
 		ctx.fillStyle = "black";
 		ctx.fillText("Westview", width / 2 - 200, height / 2 - 100);
-		ctx.fillText("Software Developers", width / 2 - 270, height / 2);
-		ctx.fillText("Association", width / 2 - 100, height / 2 + 100);
+		ctx.fillText("Software Developers", width / 2 - 430, height / 2);
+		ctx.fillText("Association", width / 2 - 275, height / 2 + 100);
 		
 		ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
 		ctx.fillRect(0, 0, width, height);
