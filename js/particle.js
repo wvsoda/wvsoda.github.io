@@ -24,6 +24,20 @@ var particle = {
 		return obj;
 	},
 	
+	create: function(x, y, speed, direction, frict, grav, rad) {
+		var obj = Object.create(this);
+			obj.x = x;
+			obj.y = y;
+			obj.vx = Math.cos(direction) * speed;
+			obj.vy = Math.sin(direction) * speed;
+			obj.gravity = grav || 0;
+			obj.friction = frict || 1;
+			obj.springs = [];
+			obj.gravitations = [];
+			obj.radius = rad;
+		return obj;
+	},
+	
 	getSpeed: function() {
 		return Math.sqrt(this.vx * this.vx + this.vy * this.vy);
 	},

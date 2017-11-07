@@ -7,11 +7,11 @@ function setup() {
 	var mouseParticle = particle.create(0, 0, 0, 0);
 		mouseParticle.mass = 1000;
 		
-	var middle = particle.create(width / 2, height / 2, 0, 0);
+	var middle = particle.create(width / 2, height / 2, 0, 0, 3);
 		middle.mass = 300;
 		
 	var orbits = [],
-		text = ["ABOUT", "CONTACT", "PROJECTS", "CALANDER"];
+		text = ["President:\nNir Levin", "Vice President:\nRobby Zaheer", "PROJECTS", "CALANDER"];
 		
 	var about = particle.create(middle.x + middle.mass / 2, middle.y, 1, Math.PI / 2),
 		contact = particle.create(middle.x - middle.mass / 2, middle.y, 1, -Math.PI / 2),
@@ -164,9 +164,8 @@ function setup() {
 		var chosen;
 		for(var i = 0; i < orbits.length; i++) {
 			if(utils.distanceTo(event.x, event.y, orbits[i].x, orbits[i].y) <= orbits[i].radius) {
-				//alert("okay");
+				alert("okay");
 				chosen = orbits[i];
-				location.href = 'Information/info.html';
 			}
 		}
 	});
