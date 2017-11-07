@@ -164,7 +164,7 @@ function setup() {
 		var chosen;
 		for(var i = 0; i < orbits.length; i++) {
 			if(utils.distanceTo(event.x, event.y, orbits[i].x, orbits[i].y) <= orbits[i].radius) {
-				//alert("okay");
+				//alert("okay")
 				chosen = orbits[i];
 				location.href = 'Information/info.html';
 			}
