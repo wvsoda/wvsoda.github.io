@@ -166,7 +166,7 @@ function setup() {
 			if(utils.distanceTo(event.x, event.y, orbits[i].x, orbits[i].y) <= orbits[i].radius) {
 				//alert("okay")
 				chosen = orbits[i];
-				location.href = 'Information/info.html';
+				location.href = 'https://wvsoda.github.io/Infomation/';
 			}
 		}
 	});
