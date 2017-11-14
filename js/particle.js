@@ -10,6 +10,7 @@ var particle = {
 	friction: 1,
 	springs: null,
 	gravitations: null,
+	id: "",
 	
 	create: function(x, y, speed, direction, frict, grav) {
 		var obj = Object.create(this);
@@ -24,17 +25,17 @@ var particle = {
 		return obj;
 	},
 	
-	create: function(x, y, speed, direction, frict, grav, rad) {
+	createBub: function(x, y, speed, direction, string) {
 		var obj = Object.create(this);
 			obj.x = x;
 			obj.y = y;
 			obj.vx = Math.cos(direction) * speed;
 			obj.vy = Math.sin(direction) * speed;
-			obj.gravity = grav || 0;
-			obj.friction = frict || 1;
+			obj.gravity = 0;
+			obj.friction = 1;
 			obj.springs = [];
 			obj.gravitations = [];
-			obj.radius = rad;
+			obj.id = string;
 		return obj;
 	},
 	

@@ -11,12 +11,12 @@ function setup() {
 		middle.mass = 300;
 		
 	var orbits = [],
-		text = ["ABOUT", "CONTACT", "PROJECTS", "CALANDER"];
+		text = ["ABOUT", "CONTACT", "PROJECTS", "JOIN"];
 		
-	var about = particle.create(middle.x + middle.mass / 2, middle.y, 1, Math.PI / 2),
-		contact = particle.create(middle.x - middle.mass / 2, middle.y, 1, -Math.PI / 2),
-		projects = particle.create(middle.x, middle.y - middle.mass, 1, 0),
-		newsletter = particle.create(middle.x, middle.y + middle.mass, 1, -Math.PI);
+	var about = particle.createBub(middle.x + middle.mass / 2, middle.y, 1, Math.PI / 2, "about"),
+		contact = particle.createBub(middle.x - middle.mass / 2, middle.y, 1, -Math.PI / 2, "team"),
+		projects = particle.createBub(middle.x, middle.y - middle.mass, 1, 0, ""),
+		newsletter = particle.createBub(middle.x, middle.y + middle.mass, 1, -Math.PI, "join");
 		
 		orbits.push(about);
 		orbits.push(contact);
@@ -164,9 +164,9 @@ function setup() {
 		var chosen;
 		for(var i = 0; i < orbits.length; i++) {
 			if(utils.distanceTo(event.x, event.y, orbits[i].x, orbits[i].y) <= orbits[i].radius) {
-				//alert("okay")
 				chosen = orbits[i];
-				location.href = 'https://wvsoda.github.io/Infomation/';
+				alert(chosen.id);
+				location.href = 'https://wvsoda.github.io/Infomation/#'+chosen.id;
 			}
 		}
 	});
